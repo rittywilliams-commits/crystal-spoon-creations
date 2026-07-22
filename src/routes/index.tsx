@@ -15,8 +15,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Crystal Love International — Freshness in Every Spoonful" },
       { name: "description", content: "Premium Greek yoghurt parfaits with fresh fruits, crunchy granola and wholesome ingredients. Order Crystal Exotic Parfaits in Lagos, Nigeria." },
-      { property: "og:title", content: "Crystal Love International — Crystal Exotic Parfaits" },
-      { property: "og:description", content: "Freshness in every spoonful. Premium parfaits crafted in Lagos." },
+      { property: "og:title", content: "Crystal Love International — Freshness in Every Spoonful" },
+      { property: "og:description", content: "Premium Greek yoghurt parfaits with fresh fruits, crunchy granola and wholesome ingredients. Order Crystal Exotic Parfaits in Lagos, Nigeria." },
       { property: "og:image", content: founderAsset.url },
       { name: "twitter:image", content: founderAsset.url },
     ],
