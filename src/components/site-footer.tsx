@@ -1,4 +1,26 @@
+import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, MessageCircle, Mail, Phone } from "lucide-react";
+
+const COLS: { title: string; links: { label: string; to: string }[] }[] = [
+  { title: "Shop", links: [
+    { label: "All Parfaits", to: "/shop" },
+    { label: "Build Your Own", to: "/build-your-own" },
+    { label: "Cart", to: "/cart" },
+    { label: "Checkout", to: "/checkout" },
+  ]},
+  { title: "Company", links: [
+    { label: "About Us", to: "/about" },
+    { label: "Wholesale", to: "/wholesale" },
+    { label: "Stockists", to: "/stockists" },
+    { label: "Blog", to: "/blog" },
+  ]},
+  { title: "Support", links: [
+    { label: "Contact", to: "/contact" },
+    { label: "FAQs", to: "/faq" },
+    { label: "Reviews", to: "/reviews" },
+    { label: "Account", to: "/account" },
+  ]},
+];
 
 export function SiteFooter() {
   return (
@@ -22,16 +44,12 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {[
-            { title: "Shop", links: ["All Parfaits", "Build Your Own", "Gift Orders", "Subscriptions"] },
-            { title: "Company", links: ["About Us", "Wholesale", "Stockists", "Blog"] },
-            { title: "Support", links: ["Contact", "Order Tracking", "FAQs", "Reviews"] },
-          ].map((col) => (
+          {COLS.map((col) => (
             <div key={col.title}>
               <h4 className="font-display text-sm uppercase tracking-widest text-gold">{col.title}</h4>
               <ul className="mt-4 space-y-2 text-sm text-cream/80">
                 {col.links.map((l) => (
-                  <li key={l}><a href="#" className="hover:text-gold">{l}</a></li>
+                  <li key={l.label}><Link to={l.to} className="hover:text-gold">{l.label}</Link></li>
                 ))}
               </ul>
             </div>
