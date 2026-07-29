@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Star, Leaf, Sparkles, ShieldCheck, Truck, Heart, MapPin, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 
@@ -28,7 +28,7 @@ const PRODUCTS = [
   {
     name: "Crystal Exotic — Extra Special",
     tag: "Signature",
-    price: "₦6,500",
+    price: "₦6,000",
     size: "500ml",
     desc: "Greek yoghurt, chia, pomegranate, dragon fruit, almonds & premium granola.",
     rating: 4.9,
@@ -39,7 +39,7 @@ const PRODUCTS = [
   {
     name: "Splenda Greek Yoghurt Parfait",
     tag: "Bestseller",
-    price: "₦4,800",
+    price: "₦2,900",
     size: "500ml",
     desc: "Sweetened Greek yoghurt layered with crunchy granola & fresh banana.",
     rating: 4.8,
@@ -50,7 +50,7 @@ const PRODUCTS = [
   {
     name: "Splenda Exotic — Premium",
     tag: "New",
-    price: "₦5,200",
+    price: "₦4,000",
     size: "350ml",
     desc: "Premium parfait with strawberry compote, cashew & house granola.",
     rating: 4.9,
@@ -111,15 +111,15 @@ function Hero() {
             ingredients that delight every bite.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#products" className="group inline-flex items-center gap-2 rounded-full bg-ink px-7 py-4 text-sm font-semibold text-cream transition-transform hover:scale-[1.02]">
+            <Link to="/shop" className="group inline-flex items-center gap-2 rounded-full bg-ink px-7 py-4 text-sm font-semibold text-cream transition-transform hover:scale-[1.02]">
               Order Now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="#stockists" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/80 px-7 py-4 text-sm font-semibold text-ink backdrop-blur transition-colors hover:bg-white">
+            </Link>
+            <Link to="/stockists" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/80 px-7 py-4 text-sm font-semibold text-ink backdrop-blur transition-colors hover:bg-white">
               <MapPin className="h-4 w-4" /> Find a Store
-            </a>
-            <a href="#wholesale" className="inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-royal underline-offset-4 hover:underline">
+            </Link>
+            <Link to="/wholesale" className="inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-royal underline-offset-4 hover:underline">
               Become a Distributor
-            </a>
+            </Link>
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
@@ -180,9 +180,9 @@ function FeaturedProducts() {
           <span className="text-xs font-semibold uppercase tracking-widest text-berry">Featured</span>
           <h2 className="mt-2 max-w-xl font-display text-4xl md:text-5xl">The parfait collection.</h2>
         </div>
-        <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold text-royal">
+        <Link to="/shop" className="inline-flex items-center gap-2 text-sm font-semibold text-royal">
           Shop all <ArrowRight className="h-4 w-4" />
-        </a>
+        </Link>
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -213,9 +213,9 @@ function FeaturedProducts() {
                   <p className="font-display text-2xl">{p.price}</p>
                   <p className="text-xs text-muted-foreground">{p.size}</p>
                 </div>
-                <button className="rounded-full bg-ink px-5 py-2.5 text-xs font-semibold text-cream transition-transform hover:scale-105">
+                <Link to="/shop" className="rounded-full bg-ink px-5 py-2.5 text-xs font-semibold text-cream transition-transform hover:scale-105">
                   Add to Cart
-                </button>
+                </Link>
               </div>
             </div>
           </article>
@@ -290,9 +290,9 @@ function FounderStory() {
               </div>
             ))}
           </div>
-          <a href="#" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-royal">
+          <Link to="/about" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-royal">
             Read our story <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
