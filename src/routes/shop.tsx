@@ -50,7 +50,7 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-soft transition-transform hover:-translate-y-1">
       <div className="relative aspect-[4/5] overflow-hidden bg-cream-deep">
-        <img src={product.img} alt={product.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <img src={active.img ?? product.img} alt={`${product.name} ${active.size}`} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <span
           className="absolute left-4 top-4 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow-soft"
           style={{ background: `var(--${product.accent})` }}

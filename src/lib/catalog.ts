@@ -11,8 +11,16 @@ import img7 from "@/assets/parfait_image_7.png.asset.json";
 import img9 from "@/assets/parfait_image_9.png.asset.json";
 import img10 from "@/assets/parfait_image_10.png.asset.json";
 import img11 from "@/assets/parfait_image_11.png.asset.json";
+import crystalSpecial350 from "@/assets/Crystal_Greek_Special_Parfait_350ml.PNG.asset.json";
+import crystalExotic200 from "@/assets/Crystal_Exotic_Extra_Special_parfait_200ml.PNG.asset.json";
+import crystalExotic350 from "@/assets/Crystal_Exotic_Extra_Special_Parfait_35oml.PNG.asset.json";
+import crystalExotic500 from "@/assets/Crystal_Exotic_Extra_Special_Parfait_500ml.PNG.asset.json";
+import crystalRegular200 from "@/assets/Crystal_Greek_Yogurt_Parfait_Sweetened_200ml.webp.asset.json";
+import crystalRegular350 from "@/assets/Crystal_Greek_Yogurt_Parfait_Regular_350ml.PNG.asset.json";
+import crystalRegular500 from "@/assets/Crystal_Greek_Yogurt_Parfait_Regular_500ml.PNG.asset.json";
+import crystalUnsweetened500 from "@/assets/Crystal_Greek_Yogurt_Parfait_Special_Unsweetened_500ml.PNG.asset.json";
 
-export type SizePrice = { size: "200ml" | "350ml" | "500ml" | "550ml" | "1L"; price: number };
+export type SizePrice = { size: "200ml" | "350ml" | "500ml" | "550ml" | "1L"; price: number; img?: string };
 
 export type Product = {
   id: string;
@@ -36,7 +44,7 @@ export const CATALOG: Product[] = [
     name: "Crystal Regular Parfait",
     desc: "Fresh Greek yoghurt with berries — sweetened, everyday classic.",
     img: img2.url,
-    sizes: [{ size: "200ml", price: 2200 }, { size: "350ml", price: 2600 }, { size: "500ml", price: 2900 }],
+    sizes: [{ size: "200ml", price: 2200, img: crystalRegular200.url }, { size: "350ml", price: 2600, img: crystalRegular350.url }, { size: "500ml", price: 2900, img: crystalRegular500.url }],
     accent: "fresh",
     rating: 4.7,
     reviews: 92,
@@ -48,7 +56,7 @@ export const CATALOG: Product[] = [
     name: "Crystal Special Parfait",
     desc: "Layered Greek yoghurt, berries, granola and honey.",
     img: img1.url,
-    sizes: [{ size: "200ml", price: 2500 }, { size: "350ml", price: 2900 }, { size: "500ml", price: 3900 }],
+    sizes: [{ size: "200ml", price: 2500 }, { size: "350ml", price: 2900, img: crystalSpecial350.url }, { size: "500ml", price: 3900, img: img1.url }],
     accent: "fresh",
     rating: 4.8,
     reviews: 148,
@@ -60,7 +68,7 @@ export const CATALOG: Product[] = [
     name: "Crystal Special Unsweetened",
     desc: "Pure Greek yoghurt, real fruit, house granola — no added sugar.",
     img: img4.url,
-    sizes: [{ size: "350ml", price: 2900 }, { size: "500ml", price: 3900 }],
+    sizes: [{ size: "350ml", price: 2900 }, { size: "500ml", price: 3900, img: crystalUnsweetened500.url }],
     accent: "royal",
     rating: 4.8,
     reviews: 76,
@@ -72,7 +80,7 @@ export const CATALOG: Product[] = [
     name: "Crystal Exotic — Extra Special",
     desc: "Greek yoghurt, chia, pomegranate, dragon fruit, kiwi & almonds.",
     img: crystalExoticAsset.url,
-    sizes: [{ size: "200ml", price: 3000 }, { size: "350ml", price: 4000 }, { size: "500ml", price: 6000 }],
+    sizes: [{ size: "200ml", price: 3000, img: crystalExotic200.url }, { size: "350ml", price: 4000, img: crystalExotic350.url }, { size: "500ml", price: 6000, img: crystalExotic500.url }],
     accent: "berry",
     rating: 4.9,
     reviews: 214,
