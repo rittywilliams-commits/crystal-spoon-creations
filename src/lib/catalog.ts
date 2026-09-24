@@ -15,6 +15,7 @@ import crystalSpecial350 from "@/assets/Crystal_Greek_Special_Parfait_350ml.PNG.
 import crystalExotic200 from "@/assets/Crystal_Exotic_Extra_Special_parfait_200ml.PNG.asset.json";
 import crystalExotic350 from "@/assets/Crystal_Exotic_Extra_Special_Parfait_35oml.PNG.asset.json";
 import crystalExotic500 from "@/assets/Crystal_Exotic_Extra_Special_Parfait_500ml.PNG.asset.json";
+import crystalExoticDefault from "@/assets/Crystal_Exotic_Extra_Special_Parfait.PNG.asset.json";
 import crystalRegular200 from "@/assets/Crystal_Greek_Yogurt_Parfait_Sweetened_200ml.webp.asset.json";
 import crystalRegular350 from "@/assets/Crystal_Greek_Yogurt_Parfait_Regular_350ml.PNG.asset.json";
 import crystalRegular500 from "@/assets/Crystal_Greek_Yogurt_Parfait_Regular_500ml.PNG.asset.json";
@@ -79,7 +80,7 @@ export const CATALOG: Product[] = [
     tier: "Exotic",
     name: "Crystal Exotic — Extra Special",
     desc: "Greek yoghurt, chia, pomegranate, dragon fruit, kiwi & almonds.",
-    img: crystalExoticAsset.url,
+    img: crystalExoticDefault.url,
     sizes: [{ size: "200ml", price: 3000, img: crystalExotic200.url }, { size: "350ml", price: 4000, img: crystalExotic350.url }, { size: "500ml", price: 6000, img: crystalExotic500.url }],
     accent: "berry",
     rating: 4.9,
